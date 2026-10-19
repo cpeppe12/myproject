@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- Topic page 3: Security, the modern web platform, market, antitrust, future -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Platform &amp; Market | The Web Browser</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+    <!-- the menu -->
+    <header class="site-header">
+      <h1 id="site-title">The Web Browser</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="topic-history.html">History</a>
+        <a href="topic-howitworks.html">How It Works</a>
+        <a href="topic-platform.html" class="active">Platform &amp; Market</a>
+        <a href="key-concepts.html">Key Concepts</a>
+        <a href="references.html">References</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main id="main">
+        <h2>Security, the Modern Web Platform &amp; the Market</h2>
+        <p>
+          Today a browser is more than a page reader &mdash; it is a secure
+          platform that can run full applications.
+        </p>
+
+        <!-- Security -->
+        <section class="card">
+          <h3>Browser Security</h3>
+          <p>
+            Because a browser runs code from websites you cannot fully trust,
+            security is really important. Modern browsers use
+            <strong>sandboxing</strong>: each tab runs in its own separate process,
+            so if one page has a bug or a bad exploit it cannot easily mess up the
+            rest of the browser or your computer.
+          </p>
+          <p>
+            Browsers also split the work into different processes (a browser
+            process, renderer processes, a GPU process and a network process) and
+            use memory safety. <strong>HTTPS</strong> is also important because it
+            encrypts the connection, so your data cannot be read or changed while it
+            is travelling to the server.
+          </p>
+        </section>
+
+        <!-- Modern web platform -->
+        <section class="card">
+          <h3>The Modern Web Platform</h3>
+          <p>
+            Browsers do not just act as page readers any more; they can be a
+            platform for apps. Standards bodies add APIs so a web app can use the
+            device and act like a normal app.
+          </p>
+          <ul>
+            <li><strong>WebAssembly (Wasm)</strong> lets developers run compiled,
+              almost-native code in the browser.</li>
+            <li><strong>Service workers</strong> let a web app work offline and be
+              installed like an app &mdash; these are called progressive web apps
+              (PWAs).</li>
+            <li>Other APIs include the <strong>Geolocation API</strong>, access to
+              the camera and microphone, and <strong>push notifications</strong>.</li>
+          </ul>
+          <p>
+            Because of this, a lot of things that used to need a downloaded app can
+            now be done in a browser.
+          </p>
+        </section>
+
+        <!-- Market share -->
+        <section class="card">
+          <h3>Current Market Share (2026)</h3>
+          <p>
+            Here are the rough global shares in 2026 (from StatCounter). Chrome
+            dominates the market.
+          </p>
+          <!-- a table -->
+          <table>
+            <caption>Approximate global browser market share, 2026</caption>
+            <thead>
+              <tr><th>Browser</th><th>About share (2026)</th><th>Engine</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Google Chrome</td><td>~65&ndash;69%</td><td>Blink</td></tr>
+              <tr><td>Apple Safari</td><td>~15&ndash;16%</td><td>WebKit</td></tr>
+              <tr><td>Microsoft Edge</td><td>~5&ndash;6%</td><td>Blink</td></tr>
+              <tr><td>Mozilla Firefox</td><td>~3%</td><td>Gecko</td></tr>
+              <tr><td>Others (Samsung, Opera, etc.)</td><td>the rest</td><td>mostly Blink</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- People and organizations -->
+        <section class="card">
+          <h3>People &amp; Organizations</h3>
+          <table>
+            <caption>Key people and organizations behind the browsers</caption>
+            <thead>
+              <tr><th>Person / Company</th><th>What they have to do with browsers</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Sir Tim Berners-Lee</td><td>Invented the web (1989) and its first browser.</td></tr>
+              <tr><td>Marc Andreessen</td><td>Co-made Mosaic (1993) and co-founded Netscape.</td></tr>
+              <tr><td>Google</td><td>Makes Chrome and the Blink and V8 engines.</td></tr>
+              <tr><td>Mozilla</td><td>Makes Firefox (Gecko); a non-profit focused on an open web.</td></tr>
+              <tr><td>Apple</td><td>Makes Safari and the WebKit engine.</td></tr>
+              <tr><td>Microsoft</td><td>Used to make Internet Explorer; now makes Edge (Chromium).</td></tr>
+              <tr><td>WHATWG / W3C</td><td>The groups that set the web standards.</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Antitrust -->
+        <section class="card">
+          <h3>Recent Developments: Antitrust</h3>
+          <p>
+            Competition is a big conversation surrounding browsers today, given
+            Chrome controls such a large portion of the market. In the US case
+            <em>United States v. Google</em> (2020), a judge ruled in August 2024
+            that Google had an illegal monopoly in search and text advertising.
+          </p>
+          <p>
+            In September 2025, the court gave behavioural remedies. Google had to
+            stop exclusive deals that make its search the default on devices, and it
+            has to share some search data with its rivals. However, the court said
+            Google did not have to sell Chrome.
+          </p>
+        </section>
+
+        <!-- Future -->
+        <section class="card accent">
+          <h3>Future Directions</h3>
+          <ul>
+            <li><strong>AI in the browser</strong> &mdash; built-in AI helpers that
+              can read a page, provide summaries, or complete tasks for the user are
+              exploding in popularity.</li>
+            <li><strong>Privacy</strong> &mdash; stronger defaults (blocking
+              tracking, DNS-over-HTTPS, passkeys) keep changing how browsers are
+              built.</li>
+            <li><strong>Engine consolidation</strong> &mdash; almost every browser
+              out now uses Chromium; Firefox and Safari are the only other
+              competition.</li>
+            <li><strong>WebAssembly &amp; PWAs</strong> &mdash; the browser keeps
+              becoming a platform for fast, offline apps.</li>
+            <li><strong>Cross-platform</strong> &mdash; browsers are on phones, TVs
+              and computers, and they are built into other apps too.</li>
+            <li><strong>AI era</strong> &mdash; most AI services run in the
+              browser.</li>
+          </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+      This is a class project for IT&nbsp;3203, Intro to Web Development (Fall 2026).
+      &nbsp;|&nbsp;
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+        Class website: ksuweb.github.io/IT3203/
+      </a>
+    </footer>
+  </div>
+</body>
+</html>

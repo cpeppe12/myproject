@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- Topic page 2: How a Browser Works (fetching, parsing, rendering, engines) -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>How It Works | The Web Browser</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+    <!-- the menu -->
+    <header class="site-header">
+      <h1 id="site-title">The Web Browser</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="topic-history.html">History</a>
+        <a href="topic-howitworks.html" class="active">How It Works</a>
+        <a href="topic-platform.html">Platform &amp; Market</a>
+        <a href="key-concepts.html">Key Concepts</a>
+        <a href="references.html">References</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main id="main">
+        <h2>How a Browser Works</h2>
+        <p>
+          What actually happens, step by step, between you typing a URL and a page
+          appearing on the screen.
+        </p>
+
+        <!-- Fetching and parsing -->
+        <section class="card">
+          <h3>Fetching &amp; Parsing</h3>
+          <p>
+            When you type a URL, the browser first works out which server it needs.
+            It takes the host name from the URL and uses <strong>DNS</strong> to turn
+            it into an IP address.
+          </p>
+          <p>
+            Then it opens a connection over TCP/IP and sends an HTTP request. The
+            server answers with an HTTP response (like <em>200 OK</em>), some
+            headers, and the actual content (HTML, an image, etc.).
+          </p>
+          <p>
+            After that the browser parses the HTML into a tree called the
+            <strong>DOM</strong>, where every element and piece of text is a node.
+            At the same time it parses the CSS into a tree of style rules for the
+            page (the <strong>CSSOM</strong>). It builds these as the content comes
+            in, which is why a page can start to show up before the whole page has
+            loaded.
+          </p>
+          <!-- Client-server model (a screenshot from Assignment 1) -->
+          <img src="images/client-server.png"
+               alt="A browser (client) sending an HTTP request to a web server (provider) and receiving an HTTP response.">
+        </section>
+
+        <!-- Rendering -->
+        <section class="card">
+          <h3>Rendering</h3>
+          <p>
+            Next the browser combines the DOM and the CSSOM into a <strong>render
+            tree</strong> &mdash; the parts that are actually visible, with their
+            styles worked out.
+          </p>
+          <p>
+            Then it does <strong>layout</strong> (sometimes called reflow), which
+            works out the size and position of every box on the page. After that it
+            <strong>paints</strong>, turning each box into actual pixels on the
+            screen. Finally it <strong>composites</strong> the layers using the
+            graphics card of the client machine to put the finished image together.
+          </p>
+          <p>
+            So the whole process is:
+            <strong>parse &rarr; render tree &rarr; layout &rarr; paint
+            &rarr; composite</strong>. Modern browsers try to do about
+            <strong>60 frames a second</strong>. If the main thread is busy, some
+            frames get dropped and the page looks like it &ldquo;lags&rdquo;.
+          </p>
+        </section>
+
+        <!-- Rendering engines -->
+        <section class="card">
+          <h3>Rendering Engines</h3>
+          <p>
+            The rendering engine is the heart of a browser. It reads the HTML and
+            CSS and makes the page that you see. A long time ago there were many
+            engines, but now three main ones are used.
+          </p>
+          <!-- a table -->
+          <table>
+            <caption>Modern rendering engines</caption>
+            <thead>
+              <tr><th>Engine</th><th>Used by</th><th>Made by</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Gecko</td><td>Firefox</td><td>Mozilla</td></tr>
+              <tr><td>Blink</td><td>Chrome, Edge</td><td>Google</td></tr>
+              <tr><td>WebKit</td><td>Safari</td><td>Apple</td></tr>
+            </tbody>
+          </table>
+          <p>
+            Chrome used WebKit at first but split it into Blink in 2013, and
+            Microsoft Edge switched to Chromium/Blink in 2019. Only Firefox (Gecko)
+            and Safari (WebKit) still use a fully separate engine today.
+          </p>
+        </section>
+
+        <!-- JavaScript engines -->
+        <section class="card">
+          <h3>JavaScript Engines</h3>
+          <p>
+            Web pages can be interactive because of JavaScript, a programming
+            language that runs in the browser. Each big browser has its own engine
+            for running JavaScript. These engines turn JavaScript code into
+            something the computer can run, and they use tricks like
+            just-in-time (JIT) compilation to run it fast.
+          </p>
+          <!-- a table -->
+          <table>
+            <caption>JavaScript engines</caption>
+            <thead>
+              <tr><th>Engine</th><th>Browser</th><th>Made by</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>V8</td><td>Chrome (and Edge)</td><td>Google</td></tr>
+              <tr><td>SpiderMonkey</td><td>Firefox</td><td>Mozilla</td></tr>
+              <tr><td>JavaScriptCore</td><td>Safari</td><td>Apple</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+      This is a class project for IT&nbsp;3203, Intro to Web Development (Fall 2026).
+      &nbsp;|&nbsp;
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+        Class website: ksuweb.github.io/IT3203/
+      </a>
+    </footer>
+  </div>
+</body>
+</html>

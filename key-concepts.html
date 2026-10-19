@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- key concepts -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Key Concepts | The Web Browser</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+    <!-- the menu -->
+    <header class="site-header">
+      <h1 id="site-title">The Web Browser</h1>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="topic-history.html">History</a>
+        <a href="topic-howitworks.html">How It Works</a>
+        <a href="topic-platform.html">Platform &amp; Market</a>
+        <a href="key-concepts.html" class="active">Key Concepts</a>
+        <a href="references.html">References</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main id="main">
+        <h2>Key Concepts</h2>
+        <p>
+          The seven ideas that matter most for understanding what a web browser is
+          and how it works.
+        </p>
+
+        <section class="card">
+          <h3>1. Client&ndash;Server Model</h3>
+          <p>
+            The web works as a client&ndash;server system. The <strong>browser</strong>
+            is the client (it requests a page) and the <strong>web server</strong>
+            is the provider (it delivers the page). When you type a URL, the browser
+            asks a server for a resource and the server sends it back.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>2. HTTP (HyperText Transfer Protocol)</h3>
+          <p>
+            HTTP is the protocol the browser uses to ask a server for a page and to
+            receive the answer. A request goes out (for example,
+            <code>GET /page.html</code>) and a response comes back with a status
+            code such as <code>200 OK</code>, plus the page content.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>3. DNS (Domain Name System)</h3>
+          <p>
+            DNS turns a friendly name, like <code>example.com</code>, into the
+            numeric IP address of the server that holds the page. It is how a
+            browser finds the right machine to talk to before it sends any request.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>4. DOM (Document Object Model)</h3>
+          <p>
+            When a browser reads HTML, it builds a tree called the DOM, where every
+            element and piece of text is a node. This tree is the in-memory
+            representation of the page that the browser works with.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>5. CSSOM (CSS Object Model)</h3>
+          <p>
+            The CSSOM is the tree the browser builds from the page's CSS &mdash; the
+            style rules that describe how things should look. The DOM and the CSSOM
+            are combined into a render tree before anything is drawn.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>6. Rendering Engine</h3>
+          <p>
+            The rendering engine is the heart of a browser. It reads the HTML and
+            CSS, builds the DOM and CSSOM, and turns them into the page you see
+            through the pipeline: parse &rarr; render tree &rarr; layout &rarr; paint
+            &rarr; composite. The main engines today are Blink, Gecko and WebKit.
+          </p>
+        </section>
+
+        <section class="card">
+          <h3>7. Sandbox (Security)</h3>
+          <p>
+            A sandbox keeps untrusted web content contained. Each tab runs in its
+            own separate process, so if one page is buggy or exploited it cannot
+            easily damage the rest of the browser or the computer. HTTPS, memory
+            safety and process isolation all work together to keep the user safe.
+          </p>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+      This is a class project for IT&nbsp;3203, Intro to Web Development (Fall 2026).
+      &nbsp;|&nbsp;
+      <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">
+        Class website: ksuweb.github.io/IT3203/
+      </a>
+    </footer>
+  </div>
+</body>
+</html>

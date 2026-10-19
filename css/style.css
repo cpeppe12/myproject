@@ -1,0 +1,139 @@
+/* style for my web browser website.
+   one file, linked at the top of every page. */
+
+/* the base look */
+body {
+  font-size: 16px;
+  color: #2c2c2c;
+  background-color: #ffffff;
+}
+
+/* links are blue */
+a {
+  color: #2a5f8a;
+  text-decoration: none;
+}
+
+/* when you hover a link it turns orange */
+a:hover {
+  color: rgb(255, 140, 0);
+}
+
+/* images fit inside the page */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* headings and text */
+h1, h2, h3 {
+  color: #1f3a5f;
+}
+
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+h3 { font-size: 17px; }
+
+p {
+  margin: 0 0 12px 0;
+}
+
+ul, ol {
+  margin: 0 0 12px 1.4rem;
+}
+
+/* center the page and stop it from being too wide */
+#main {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  padding: 15px 20px;
+}
+
+/* the header and footer center the same way so they line up */
+.site-header {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  padding: 15px 20px 0 20px;
+}
+
+.site-footer {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  padding: 15px 20px;
+  /* a thin line above the footer */
+  border-top: 1px solid #d9dde3;
+}
+
+#site-title {
+  color: #1f3a5f;
+  font-size: 22px;
+}
+
+/* the menu at the top of the page */
+.main-nav {
+  background-color: rgb(216, 245, 254);
+  padding: 5px 10px;
+  margin: 10px 0;
+  /* flex puts the links in one row and wraps them if it gets too wide */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* each menu item is a little box */
+.main-nav a {
+  color: #1f3a5f;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: lightyellow;
+  border-left: 2px solid darkblue;
+  border-right: 2px solid darkblue;
+}
+
+/* when you hover a menu item it turns orange */
+.main-nav a:hover {
+  color: white;
+  background-color: rgb(255, 140, 0);
+}
+
+/* the page you are on is filled in orange */
+.main-nav a.active {
+  color: white;
+  background-color: rgb(255, 140, 0);
+}
+
+/* a section of the page */
+.card {
+  margin-bottom: 15px;
+}
+
+/* tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  border: 1px solid #d9dde3;
+}
+
+th, td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid #d9dde3;
+}
+
+/* the top row of a table */
+th {
+  background-color: #1f3a5f;
+  color: #ffffff;
+}
+
+/* the links in the footer */
+.site-footer a {
+  color: #2a5f8a;
+}
+
+.site-footer a:hover {
+  color: rgb(255, 140, 0);
+}
